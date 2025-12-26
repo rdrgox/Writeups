@@ -232,3 +232,10 @@ SMB         10.64.186.110   445    PC-TO            1013: PC-TO\spike (SidTypeUs
 ```
 
 Vamos a filtra la lista de nombres de usuarios
+
+```bash
+cat to_users.txt| grep "SidTypeUser" | awk '{print $6}' | cut -d '\' -f 2 > users.txt  
+```
+
+ahora tenemos un lista posibles de usuarios
+
